@@ -1,29 +1,14 @@
-function isEnoughCapacity(products, containerSize) {
-  let totalCount = 0;
-  
-    for (const productName in products) {
-        totalCount += products[productName];
-    }
+const categoriesList = document.getElementById("categories");
 
-    if (totalCount <= containerSize) {
-        return true;
-    } else {
-        return false;
-    }
-}
+const categoryItems = categoriesList.querySelectorAll("li.item");
 
-console.log(
-  isEnoughCapacity({ apples: 2, grapes: 3, carrots: 1 }, 8)
-); // true
+console.log(`Number of categories: ${categoryItems.length}`);
 
-console.log(
-  isEnoughCapacity({ apples: 4, grapes: 6, lime: 16 }, 12)
-); // false
+categoryItems.forEach(categoryItem => {
+  const categoryTitle = categoryItem.querySelector("h2").textContent;
 
-console.log(
-  isEnoughCapacity({ apples: 1, lime: 5, tomatoes: 3 }, 14)
-); // true
+  const categoryItemsCount = categoryItem.querySelectorAll("ul li").length;
 
-console.log(
-  isEnoughCapacity({ apples: 18, potatoes: 5, oranges: 2 }, 7)
-); // false
+  console.log(`Category: ${categoryTitle}`);
+  console.log(`Elements: ${categoryItemsCount}`);
+});
