@@ -5,6 +5,61 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Task 2</title>
+    <style>
+      body {
+        font-family: "Montserrat", sans-serif;
+        margin: 0;
+      }
+
+      ul.gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 48px 24px;
+        padding: 48px 24px;
+        list-style-type: none;
+      }
+
+      li.gallery-item {
+        flex: 0 0 calc(33.33% - 48px);
+        box-sizing: border-box;
+        position: relative;
+        text-align: center;
+        overflow: hidden;
+      }
+
+      img.gallery-image {
+        width: 360px;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin: 10px;
+        position: relative;
+        z-index: 1;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      li.gallery-item:hover img.gallery-image {
+        transform: scale(1.05);
+      }
+
+      li.gallery-item::before {
+        content: "";
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        right: -10px;
+        bottom: -10px;
+        background-color: #f6f6fe;
+        border-radius: 8px;
+        z-index: -1;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      li.gallery-item:hover::before {
+        transform: scale(1.05);
+      }
+    </style>
     <link rel="stylesheet" href="css/common.css" />
   </head>
   <body>
