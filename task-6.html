@@ -5,7 +5,84 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Task 6</title>
+    <style>
+      body {
+        font-family: "Montserrat", sans-serif;
+      }
+
+      input {
+        color: #2e2f42;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px; /* 150% */
+        letter-spacing: 0.64px;
+        border-radius: 8px;
+        border: 1px solid #808080;
+        padding: 8px 72px;
+        text-align: center; /* Добавлено свойство для центрирования текста */
+      }
+
+      input[type="number"]::-webkit-inner-spin-button,
+      input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      input[type="number"] {
+        -moz-appearance: textfield;
+      }
+
+      button {
+        color: #fff;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px; /* 150% */
+        letter-spacing: 0.64px;
+        width: 120px;
+        padding: 8px 16px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        border-radius: 8px;
+        border: none;
+        background: #4e75ff;
+      }
+
+      button.red {
+        background: #ff4e4e;
+      }
+
+      #controls {
+        display: flex;
+        gap: 16px;
+        border-radius: 8px;
+        background: #f6f6fe;
+        width: 486px;
+        padding: 32px;
+      }
+
+      #boxes {
+        margin-top: 16px;
+        display: flex;
+        width: 486px;
+        padding: 32px;
+        align-items: flex-start;
+        gap: 10px;
+        border-radius: 8px;
+        background: #f6f6fe;
+      }
+    </style>
     <link rel="stylesheet" href="css/common.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <p><a href="index.html">Go back</a></p>
@@ -13,7 +90,7 @@
     <div id="controls">
       <input type="number" min="1" max="100" step="1" />
       <button type="button" data-create>Create</button>
-      <button type="button" data-destroy>Destroy</button>
+      <button type="button" class="red" data-destroy>Destroy</button>
     </div>
 
     <div id="boxes"></div>
