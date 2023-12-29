@@ -13,13 +13,23 @@
     <form class="login-form">
       <label>
         Email
-        <input type="email" name="email" />
+        <input
+          type="email"
+          name="email"
+          id="emailInput"
+          autocomplete="username email"
+        />
       </label>
       <label>
         Password
-        <input type="password" name="password" />
+        <input
+          type="password"
+          name="password"
+          id="passwordInput"
+          autocomplete="current-password"
+        />
       </label>
-      <button type="submit">Login</button>
+      <button type="submit">Log in</button>
     </form>
 
     <script src="./js/task-4.js" type="module"></script>
